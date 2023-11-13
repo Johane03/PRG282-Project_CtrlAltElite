@@ -36,9 +36,6 @@ namespace Test
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            EnableButtons?.Invoke(this, e);
-            this.Close();
-
             bool found = false;
             string username = txtUsernameLogin.Text;
             string password = txtPasswordLogin.Text;
@@ -51,6 +48,8 @@ namespace Test
                 if (login.Username == username && login.Password == password)
                 {
                     found = true;
+                    EnableButtons?.Invoke(this, e);
+                    this.Close();
                 }
             }
 

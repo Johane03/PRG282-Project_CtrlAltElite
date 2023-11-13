@@ -100,9 +100,12 @@ namespace Test
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            handler.UpdateStudentsData(int.Parse(txtStudentID.Text), txtSurname.Text, txtSurname.Text, DateTime.Parse(txtDOB.Text), txtGender.Text, txtPhone.Text);
+            handler.UpdateStudentsData(int.Parse(txtStudentID.Text), txtName.Text, txtSurname.Text, DateTime.Parse(txtDOB.Text), txtGender.Text, txtPhone.Text);
            // handler.UpdateStudentAddress(int.Parse(txtStudentID.Text),rtxAddress);
-            handler.UpdateImage(imagePath, int.Parse(txtStudentID.Text));
+            if (imagePath == null)
+            {
+                handler.UpdateImage(imagePath, int.Parse(txtStudentID.Text));
+            }
             dgvStudents.DataSource = handler.getStudents();
         }
 
@@ -123,6 +126,7 @@ namespace Test
             txtSurname.Clear();
             rtxAddress.Clear();
             rtxModules.Clear();
+            picbxStudent.Image = picbxStudent.InitialImage;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

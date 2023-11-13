@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Test.DataLayer;
 using Test.BusinessLogicLayer; //Imported layer to use 'Login' class
+using System.IO;
 
 namespace Test
 {
@@ -21,6 +22,9 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        //Create FileHandler Object
+        FileHandler fh = new FileHandler();
 
         private void lblRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -39,7 +43,6 @@ namespace Test
             string username = txtUsernameLogin.Text;
             string password = txtPasswordLogin.Text;
 
-            FileHandler fh = new FileHandler();
             List<Login> loginList = fh.GetLogins();
 
             //Check if Username & Password exists in textfile
@@ -73,7 +76,8 @@ namespace Test
 
         private void Login1_Load(object sender, EventArgs e)
         {
-            
+            //Invoke CreateFile Method from FileHandler class
+            fh.CreateFile();
         }
     }
 }

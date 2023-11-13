@@ -9,7 +9,7 @@ namespace Test.BusinessLogicLayer
 {
     internal class Logic
     {
-        //Validate password
+        //Validate password when registering
         public Boolean Validate(string password)
         {
             return Regex.IsMatch(password, @"^(?=.*[A-Z])(?=.*\d).*$");

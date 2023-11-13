@@ -67,7 +67,7 @@
             this.label1.Font = new System.Drawing.Font("Impact", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(580, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 46);
+            this.label1.Size = new System.Drawing.Size(271, 59);
             this.label1.TabIndex = 0;
             this.label1.Text = "Student Data";
             // 
@@ -89,7 +89,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(68, 530);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 26);
+            this.label3.Size = new System.Drawing.Size(174, 33);
             this.label3.TabIndex = 3;
             this.label3.Text = "Student Number: ";
             // 
@@ -98,7 +98,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(68, 648);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 26);
+            this.label4.Size = new System.Drawing.Size(69, 33);
             this.label4.TabIndex = 4;
             this.label4.Text = "Name:";
             // 
@@ -107,7 +107,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(576, 648);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 26);
+            this.label5.Size = new System.Drawing.Size(97, 33);
             this.label5.TabIndex = 5;
             this.label5.Text = "Surname:";
             // 
@@ -116,7 +116,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(68, 775);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 26);
+            this.label6.Size = new System.Drawing.Size(139, 33);
             this.label6.TabIndex = 6;
             this.label6.Text = "Date of Birth:";
             // 
@@ -125,7 +125,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(592, 775);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 26);
+            this.label7.Size = new System.Drawing.Size(81, 33);
             this.label7.TabIndex = 7;
             this.label7.Text = "Gender:";
             // 
@@ -134,7 +134,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(68, 912);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 26);
+            this.label2.Size = new System.Drawing.Size(74, 33);
             this.label2.TabIndex = 8;
             this.label2.Text = "Phone:";
             // 
@@ -143,7 +143,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(582, 912);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 26);
+            this.label8.Size = new System.Drawing.Size(91, 33);
             this.label8.TabIndex = 9;
             this.label8.Text = "Address:";
             // 
@@ -152,7 +152,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(68, 1044);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 26);
+            this.label9.Size = new System.Drawing.Size(94, 33);
             this.label9.TabIndex = 10;
             this.label9.Text = "Modules:";
             // 
@@ -161,7 +161,7 @@
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Location = new System.Drawing.Point(143, 645);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(326, 33);
+            this.txtName.Size = new System.Drawing.Size(326, 39);
             this.txtName.TabIndex = 11;
             // 
             // txtDOB
@@ -169,7 +169,7 @@
             this.txtDOB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDOB.Location = new System.Drawing.Point(213, 769);
             this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Size = new System.Drawing.Size(256, 33);
+            this.txtDOB.Size = new System.Drawing.Size(256, 39);
             this.txtDOB.TabIndex = 12;
             // 
             // txtPhone
@@ -177,7 +177,7 @@
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhone.Location = new System.Drawing.Point(148, 910);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(321, 33);
+            this.txtPhone.Size = new System.Drawing.Size(321, 39);
             this.txtPhone.TabIndex = 13;
             // 
             // txtGender
@@ -185,7 +185,7 @@
             this.txtGender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGender.Location = new System.Drawing.Point(679, 769);
             this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(256, 33);
+            this.txtGender.Size = new System.Drawing.Size(256, 39);
             this.txtGender.TabIndex = 14;
             // 
             // txtSurname
@@ -193,7 +193,7 @@
             this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSurname.Location = new System.Drawing.Point(679, 645);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(256, 33);
+            this.txtSurname.Size = new System.Drawing.Size(256, 39);
             this.txtSurname.TabIndex = 15;
             // 
             // rtxModules
@@ -285,7 +285,7 @@
             // 
             this.txtStudentID.Location = new System.Drawing.Point(248, 528);
             this.txtStudentID.Name = "txtStudentID";
-            this.txtStudentID.Size = new System.Drawing.Size(487, 33);
+            this.txtStudentID.Size = new System.Drawing.Size(487, 39);
             this.txtStudentID.TabIndex = 25;
             // 
             // pictureBox3
@@ -340,11 +340,11 @@
             // StudentData
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1510, 1138);
+            this.ClientSize = new System.Drawing.Size(1510, 1100);
             this.Controls.Add(this.btn_BackStudent);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtStudentID);

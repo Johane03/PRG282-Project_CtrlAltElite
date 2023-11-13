@@ -13,7 +13,7 @@ namespace Test.DataLayer
         //Create a list of Login class to compare textfile with verified login info with entered Username & Password on Login Form
         public List<Login> GetLogins()
         {
-            string filePath = "LoginData.txt";
+            string filePath = @"C:\\Users\\lieli\\OneDrive - belgiumcampus.ac.za\\_Belgium Campus\\Second Year (2023)\\PRG282\\_Project\\Milestone2/LoginData.txt";
             List<Login> loginList = new List<Login>();
             string[] lines = File.ReadAllLines(filePath);
 

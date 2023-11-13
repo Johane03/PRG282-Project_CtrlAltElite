@@ -32,7 +32,6 @@ namespace Test
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            
             RegistrationComplete registrationComplete = new RegistrationComplete();
             EnableButtons?.Invoke(this, e);
             registrationComplete.Show();

@@ -4,7 +4,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.IO;
 using System.Data;
 using System.Windows.Forms;
@@ -383,5 +382,18 @@ namespace Test.DataLayer
             return table;
         }
 
+        public void Register(Login Logins)
+        {
+            try
+            {
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show("Error registering student");
+            }
+
+        }
     }
 }

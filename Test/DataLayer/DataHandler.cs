@@ -17,6 +17,7 @@ namespace Test.DataLayer
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         string con = "Server= .;Initial Catalog= BelgiumCampusDB_PRG282;Integrated Security=SSPI";
+
         public DataTable getStudents()
         {
             string query = $"SELECT * FROM Students " +

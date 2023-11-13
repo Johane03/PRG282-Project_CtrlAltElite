@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Test.DataLayer;
+using Test.BusinessLogicLayer; //Imported layer to use 'Login' class
 
 namespace Test
 {
@@ -32,6 +34,35 @@ namespace Test
         {
             EnableButtons?.Invoke(this, e);
             this.Close();
+
+            bool found = false;
+            string username = txtUsernameLogin.Text;
+            string password = txtPasswordLogin.Text;
+
+            FileHandler fh = new FileHandler();
+            List<Login> loginList = fh.GetLogins();
+
+            //Check if Username & Password exists in textfile
+            foreach (Login login in loginList)
+            {
+                if (login.Username == username && login.Password == password)
+                {
+                    found = true;
+                }
+            }
+
+            if (!found)
+            {
+                MessageBox.Show("Could not log in. \nPlease try again or Register.");
+            }
+            else
+            {
+                MessageBox.Show("Login successful!");
+                //Hides Login Form & Displays Navigation Form when user is verified
+                Navigation navigation = new Navigation();
+                navigation.Show();
+                this.Hide();
+            }
         }
 
 

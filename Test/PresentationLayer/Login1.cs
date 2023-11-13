@@ -60,9 +60,6 @@ namespace Test
             else
             {
                 MessageBox.Show("Login successful!");
-                //Hides Login Form & Displays Navigation Form when user is verified
-                Navigation navigation = new Navigation();
-                navigation.Show();
                 this.Hide();
             }
         }
@@ -75,8 +72,7 @@ namespace Test
 
         private void Login1_Load(object sender, EventArgs e)
         {
-            //Invoke CreateFile Method from FileHandler class
-            fh.CreateFile();
+            
         }
     }
 }

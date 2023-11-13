@@ -382,18 +382,27 @@ namespace Test.DataLayer
             return table;
         }
 
-        public void Register(Login Logins)
+        public void Register(string username, string password)
         {
+            string filePath = @"LoginData.txt";
+
             try
             {
+                if (File.Exists(filePath))
+                {
+                    using (StreamWriter writer = new StreamWriter(filePath))
+                    {
+                        writer.WriteLine(username + "," + password);
+                    }
 
+                }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show(e.Message);
-                MessageBox.Show("Error registering student");
+                MessageBox.Show(ex.Message);
+                MessageBox.Show("Textfile does not exist");
             }
-
+          
         }
     }
 }

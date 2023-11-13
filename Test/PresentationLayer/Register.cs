@@ -32,10 +32,29 @@ namespace Test
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            RegistrationComplete registrationComplete = new RegistrationComplete();
-            EnableButtons?.Invoke(this, e);
-            registrationComplete.Show();
-            this.Close();
-        }
+            //Fetching info from textboxes
+            string username = txtUsername_Register.Text;
+            string password = txtPassword_Register.Text;
+
+            //Logic Class Object
+            Logic logic = new Logic();
+            //DataHandler Class Object
+            DataHandler handler = new DataHandler();
+
+            //Validating password
+            if (logic.ValidatePassword(password))
+            {
+                handler.Register(username, password);
+
+                RegistrationComplete registrationComplete = new RegistrationComplete();
+                EnableButtons?.Invoke(this, e);
+                registrationComplete.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Registration Unsuccessful. \nPlease try again.");
+            }
+        }   
     }
 }

@@ -328,7 +328,7 @@ namespace Test.DataLayer
             {
                 if (File.Exists(filePath))
                 {
-                    using (StreamWriter writer = new StreamWriter(filePath))
+                    using (StreamWriter writer = new StreamWriter(filePath,true)) //True means append
                     {
                         writer.WriteLine(username + "," + password);
                     }

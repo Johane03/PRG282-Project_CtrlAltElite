@@ -87,9 +87,7 @@ namespace Test
             }
             DataGridViewImageColumn imageCol = (DataGridViewImageColumn)dgvStudents.Columns[6];
             imageCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
-                
-            
-
+               
         }
 
         private void button1_Click(object sender, EventArgs e)

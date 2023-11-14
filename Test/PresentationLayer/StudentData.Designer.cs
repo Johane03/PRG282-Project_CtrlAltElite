@@ -65,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(580, 34);
+            this.label1.Location = new System.Drawing.Point(907, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(271, 59);
             this.label1.TabIndex = 0;
@@ -87,7 +87,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 530);
+            this.label3.Location = new System.Drawing.Point(108, 821);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 33);
             this.label3.TabIndex = 3;
@@ -96,7 +96,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 648);
+            this.label4.Location = new System.Drawing.Point(108, 1005);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 33);
             this.label4.TabIndex = 4;
@@ -105,7 +105,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(576, 648);
+            this.label5.Location = new System.Drawing.Point(900, 1005);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 33);
             this.label5.TabIndex = 5;
@@ -114,7 +114,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(68, 775);
+            this.label6.Location = new System.Drawing.Point(108, 1204);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 33);
             this.label6.TabIndex = 6;
@@ -123,7 +123,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(592, 775);
+            this.label7.Location = new System.Drawing.Point(927, 1204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 33);
             this.label7.TabIndex = 7;
@@ -132,7 +132,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 912);
+            this.label2.Location = new System.Drawing.Point(109, 1416);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 33);
             this.label2.TabIndex = 8;
@@ -141,16 +141,16 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(582, 912);
+            this.label8.Location = new System.Drawing.Point(1138, 1773);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 33);
+            this.label8.Size = new System.Drawing.Size(114, 41);
             this.label8.TabIndex = 9;
             this.label8.Text = "Address:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(68, 1044);
+            this.label9.Location = new System.Drawing.Point(108, 1624);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(94, 33);
             this.label9.TabIndex = 10;
@@ -208,9 +208,9 @@
             // rtxAddress
             // 
             this.rtxAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtxAddress.Location = new System.Drawing.Point(679, 893);
+            this.rtxAddress.Location = new System.Drawing.Point(849, 1108);
             this.rtxAddress.Name = "rtxAddress";
-            this.rtxAddress.Size = new System.Drawing.Size(256, 127);
+            this.rtxAddress.Size = new System.Drawing.Size(320, 159);
             this.rtxAddress.TabIndex = 17;
             this.rtxAddress.Text = "";
             // 

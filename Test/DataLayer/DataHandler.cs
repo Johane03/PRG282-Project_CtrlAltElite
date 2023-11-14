@@ -130,7 +130,7 @@ namespace Test.DataLayer
                 finally { conn.Close(); }
             }
         }
-        public void AddStudent(Students student)
+        public void AddStudent(Student student)
         {
             string query = $"INSERT INTO Students (StudentID,FirstName,Surname,DOB,Gender,Phone,StudentImage) VALUES " +
                             $"('@studentID','@name','@surname','@dob','@gender','@phone','@stdImg')";
@@ -165,38 +165,7 @@ namespace Test.DataLayer
                 finally { conn.Close(); }
             }
         }
-        public void AddStudentAdress(StudentAddress studentAddress)
-        {
-            string query = $"INSERT INTO StudentAddress (StudentID, Street, City, Province, Country, PostalCode) VALUES " +
-                $"('@studentID','@street','@city','@prov','@country','@postalCode')";
-
-            using (SqlConnection conn = new SqlConnection(con))
-            {
-                try
-                {
-                    conn.Open();
-
-                    // Create a command to insert  
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@studentID", studentAddress.StudentID);
-                        cmd.Parameters.AddWithValue("@street", studentAddress.Street);
-                        cmd.Parameters.AddWithValue("@city", studentAddress.City);
-                        cmd.Parameters.AddWithValue("@prov", studentAddress.Province);
-                        cmd.Parameters.AddWithValue("@country", studentAddress.Country);
-                        cmd.Parameters.AddWithValue("@postalCode", studentAddress.PostalCode);
-                        // Execute the command
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show(e.Message);
-                    MessageBox.Show("Error connecting to database");
-                }
-                finally { conn.Close(); }
-            }
-        }
+        
         public void AddCourse(int CodeCourse, int StudentID)
         {
             string query = $"INSERT INTO Course (CourseCode, StudentID) VALUES " +
@@ -288,11 +257,11 @@ namespace Test.DataLayer
             }
         }
 
-        public void UpdateStudentsData(int studentID, string newFirstName, string newSurname, DateTime newDOB, string newGender, string newPhone)
+        public void UpdateStudentsData(int studentID, string newFirstName, string newSurname, DateTime newDOB, string newGender, string newPhone, string newCampus)
         {
             string query = "UPDATE Students SET " +
                 "FirstName = @NewFirstName, Surname = @NewSurname, DOB = @NewDOB, " +
-                "Gender = @NewGender, Phone = @NewPhone " +
+                "Gender = @NewGender, Phone = @NewPhone, Campus = @NewCampus " +
                 "WHERE StudentID = @studentID";
 
             using (SqlConnection conn = new SqlConnection(con))
@@ -310,6 +279,7 @@ namespace Test.DataLayer
                         cmd.Parameters.AddWithValue("@NewDOB", newDOB);
                         cmd.Parameters.AddWithValue("@NewGender", newGender);
                         cmd.Parameters.AddWithValue("@NewPhone", newPhone);
+                        cmd.Parameters.AddWithValue("@NewCampus", newCampus);
                         cmd.Parameters.AddWithValue("@studentID", studentID);
 
                         // Execute the command
@@ -325,39 +295,7 @@ namespace Test.DataLayer
                 finally { conn.Close(); }
             }
         }
-        public void UpdateStudentAddress(int studentID, string[] address)
-        {
-            string query = "UPDATE StudentAddress SET " +
-                           "Street = @NewStreet, City = @NewCity, Province = @NewProvince, " +
-                           "Country = @NewCountry, PostalCode = @NewPostalCode " +
-                           "WHERE StudentID = @StudentID";
 
-            using (SqlConnection conn = new SqlConnection(con))
-            {
-                try
-                {
-                    conn.Open();
-
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@NewStreet", address[2]);
-                        cmd.Parameters.AddWithValue("@NewCity", address[3]);
-                        cmd.Parameters.AddWithValue("@NewProvince", address[4]);
-                        cmd.Parameters.AddWithValue("@NewCountry", address[5]);
-                        cmd.Parameters.AddWithValue("@NewPostalCode", address[6]);
-                        cmd.Parameters.AddWithValue("@StudentID", studentID);
-
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show(e.Message);
-                    MessageBox.Show("Error updating student address");
-                }
-                finally { conn.Close(); }
-            }
-        }
         public DataTable SearchStudent(int stdID)
         {
             string query = $"SELECT * FROM Students " +

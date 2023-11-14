@@ -33,10 +33,8 @@ namespace Test
             StudentAdded studentAdded = new StudentAdded();
             studentAdded.Show();
 
-            Students student = new Students(int.Parse(txtStudentID.Text),txtName.Text,txtSurname.Text,DateTime.Parse(txtDOB.Text),txtGender.Text,txtPhone.Text,picbxStudent.BackgroundImage);
+            Student student = new Student(int.Parse(txtStudentID.Text),txtName.Text,txtSurname.Text,DateTime.Parse(txtDOB.Text),txtGender.Text,txtPhone.Text,/*Add Campus.txt*/,picbxStudent.BackgroundImage);
             handler.AddStudent(student);
-            //StudentAddress studentAddress = new StudentAddress(int.Parse(txtStudentID.Text),);
-            //handler.AddStudentAdress(studentAddress);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -113,8 +111,7 @@ namespace Test
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            handler.UpdateStudentsData(int.Parse(txtStudentID.Text), txtName.Text, txtSurname.Text, DateTime.Parse(txtDOB.Text), txtGender.Text, txtPhone.Text);
-            handler.UpdateStudentAddress(int.Parse(txtStudentID.Text), rtxAddress.Lines);
+            handler.UpdateStudentsData(int.Parse(txtStudentID.Text), txtName.Text, txtSurname.Text, DateTime.Parse(txtDOB.Text), txtGender.Text, txtPhone.Text /*Add Campus txt*/);
             if (imagePath == null)
             {
                 handler.UpdateImage(imagePath, int.Parse(txtStudentID.Text));

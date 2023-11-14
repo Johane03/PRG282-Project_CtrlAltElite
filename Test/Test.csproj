@@ -49,8 +49,7 @@
     <Compile Include="BusinessLogicLayer\Course.cs" />
     <Compile Include="BusinessLogicLayer\Logic.cs" />
     <Compile Include="BusinessLogicLayer\Login.cs" />
-    <Compile Include="BusinessLogicLayer\StudentAddress.cs" />
-    <Compile Include="BusinessLogicLayer\Students.cs" />
+    <Compile Include="BusinessLogicLayer\Student.cs" />
     <Compile Include="DataLayer\DataHandler.cs" />
     <Compile Include="DataLayer\FileHandler.cs" />
     <Compile Include="PresentationLayer\Login1.cs">

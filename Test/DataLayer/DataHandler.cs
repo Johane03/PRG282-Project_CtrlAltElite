@@ -8,6 +8,7 @@ using System.IO;
 using System.Data;
 using System.Windows.Forms;
 using Test.BusinessLogicLayer;
+using System.Runtime.Remoting.Contexts;
 
 namespace Test.DataLayer
 {
@@ -223,6 +224,32 @@ namespace Test.DataLayer
                 finally { conn.Close(); }
             }
         }
+
+        /*public void UpdateModulesData(Course course)
+        {
+            string query = $"UPDATE Modules SET " +
+                $"CourseCode = '{course.CourseCode}', " +
+                $"ModuleName = '{course.ModuleName}', " +
+                $"ModuleDescription = '{course.ModuleDescription}', " +
+                $"WHERE CourseCode = '{course.CourseCode}';";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(con))
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand(query, conn))
+                    {
+                        command.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }*/
+
         public void UpdateModulesData(int moduleID, string newModuleName, string newModuleDescription)
         {
             string query = "UPDATE Modules SET " +

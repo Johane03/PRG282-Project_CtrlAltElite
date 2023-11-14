@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using Test.BusinessLogicLayer;
 using Test.DataLayer;
 
@@ -44,7 +45,7 @@ namespace Test
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            handler.UpdateModulesData(int.Parse(txtModuleCode.Text), txtModuleName.Text, rtxModuledesc.Text);
+           handler.UpdateModulesData(int.Parse(txtModuleCode.Text), txtModuleName.Text, rtxModuledesc.Text);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

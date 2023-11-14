@@ -325,7 +325,7 @@ namespace Test.DataLayer
                 finally { conn.Close(); }
             }
         }
-        public void UpdateStudentAddress(int studentID, string newStreet, string newCity, string newProvince, string newCountry, string newPostalCode)
+        public void UpdateStudentAddress(int studentID, string[] address)
         {
             string query = "UPDATE StudentAddress SET " +
                            "Street = @NewStreet, City = @NewCity, Province = @NewProvince, " +
@@ -340,11 +340,11 @@ namespace Test.DataLayer
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@NewStreet", newStreet);
-                        cmd.Parameters.AddWithValue("@NewCity", newCity);
-                        cmd.Parameters.AddWithValue("@NewProvince", newProvince);
-                        cmd.Parameters.AddWithValue("@NewCountry", newCountry);
-                        cmd.Parameters.AddWithValue("@NewPostalCode", newPostalCode);
+                        cmd.Parameters.AddWithValue("@NewStreet", address[2]);
+                        cmd.Parameters.AddWithValue("@NewCity", address[3]);
+                        cmd.Parameters.AddWithValue("@NewProvince", address[4]);
+                        cmd.Parameters.AddWithValue("@NewCountry", address[5]);
+                        cmd.Parameters.AddWithValue("@NewPostalCode", address[6]);
                         cmd.Parameters.AddWithValue("@StudentID", studentID);
 
                         cmd.ExecuteNonQuery();

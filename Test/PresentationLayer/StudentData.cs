@@ -68,6 +68,7 @@ namespace Test
         {
             foreach(DataGridViewRow row in dgvStudents.SelectedRows)
             {
+                rtxAddress.Clear();
                 txtStudentID.Text = row.Cells[0].Value.ToString();
                 txtName.Text = row.Cells[1].Value.ToString();
                 txtSurname.Text = row.Cells[2].Value.ToString();
@@ -75,6 +76,18 @@ namespace Test
                 txtGender.Text = row.Cells[4].Value.ToString();
                 txtPhone.Text = row.Cells[5].Value.ToString();
                 LoadImage(int.Parse(txtStudentID.Text));
+
+                string[] address = new string[5];
+                address[0] = row.Cells[10].Value.ToString();
+                address[1] = row.Cells[11].Value.ToString();
+                address[2] = row.Cells[12].Value.ToString();
+                address[3] = row.Cells[13].Value.ToString();
+                address[4] = row.Cells[15].Value.ToString();
+
+                for (int i = 0; i < 5; i++)
+                {
+                    rtxAddress.Text = rtxAddress.Text + "\n" + address[i] ;
+                }
             }
         }
 
@@ -101,7 +114,7 @@ namespace Test
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             handler.UpdateStudentsData(int.Parse(txtStudentID.Text), txtName.Text, txtSurname.Text, DateTime.Parse(txtDOB.Text), txtGender.Text, txtPhone.Text);
-           // handler.UpdateStudentAddress(int.Parse(txtStudentID.Text),rtxAddress);
+            handler.UpdateStudentAddress(int.Parse(txtStudentID.Text), rtxAddress.Lines);
             if (imagePath == null)
             {
                 handler.UpdateImage(imagePath, int.Parse(txtStudentID.Text));

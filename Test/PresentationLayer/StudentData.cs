@@ -33,7 +33,7 @@ namespace Test
             StudentAdded studentAdded = new StudentAdded();
             studentAdded.Show();
 
-            Student student = new Student(int.Parse(txtStudentID.Text),txtName.Text,txtSurname.Text,DateTime.Parse(txtDOB.Text),txtGender.Text,txtPhone.Text,/*Add Campus.txt*/,picbxStudent.BackgroundImage);
+            Student student = new Student(int.Parse(txtStudentID.Text),txtName.Text,txtSurname.Text,DateTime.Parse(txtDOB.Text),txtGender.Text,txtPhone.Text,txtCampus.Text,picbxStudent.BackgroundImage);
             handler.AddStudent(student);
         }
 
@@ -64,28 +64,16 @@ namespace Test
 
         private void dgvStudents_SelectionChanged(object sender, EventArgs e)
         {
-            foreach(DataGridViewRow row in dgvStudents.SelectedRows)
+            foreach (DataGridViewRow row in dgvStudents.SelectedRows)
             {
-                rtxAddress.Clear();
                 txtStudentID.Text = row.Cells[0].Value.ToString();
                 txtName.Text = row.Cells[1].Value.ToString();
                 txtSurname.Text = row.Cells[2].Value.ToString();
                 txtDOB.Text = row.Cells[3].Value.ToString();
                 txtGender.Text = row.Cells[4].Value.ToString();
                 txtPhone.Text = row.Cells[5].Value.ToString();
+                txtCampus.Text = row.Cells[6].Value.ToString();
                 LoadImage(int.Parse(txtStudentID.Text));
-
-                string[] address = new string[5];
-                address[0] = row.Cells[10].Value.ToString();
-                address[1] = row.Cells[11].Value.ToString();
-                address[2] = row.Cells[12].Value.ToString();
-                address[3] = row.Cells[13].Value.ToString();
-                address[4] = row.Cells[15].Value.ToString();
-
-                for (int i = 0; i < 5; i++)
-                {
-                    rtxAddress.Text = rtxAddress.Text + "\n" + address[i] ;
-                }
             }
         }
 
@@ -111,7 +99,7 @@ namespace Test
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            handler.UpdateStudentsData(int.Parse(txtStudentID.Text), txtName.Text, txtSurname.Text, DateTime.Parse(txtDOB.Text), txtGender.Text, txtPhone.Text /*Add Campus txt*/);
+            handler.UpdateStudentsData(int.Parse(txtStudentID.Text), txtName.Text, txtSurname.Text, DateTime.Parse(txtDOB.Text), txtGender.Text, txtPhone.Text, txtCampus.Text);
             if (imagePath == null)
             {
                 handler.UpdateImage(imagePath, int.Parse(txtStudentID.Text));
@@ -134,7 +122,7 @@ namespace Test
             txtPhone.Clear();
             txtStudentID.Clear();
             txtSurname.Clear();
-            rtxAddress.Clear();
+            txtCampus.Clear();
             rtxModules.Clear();
             picbxStudent.Image = picbxStudent.InitialImage;
         }

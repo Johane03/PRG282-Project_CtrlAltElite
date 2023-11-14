@@ -36,7 +36,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblCampus = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtDOB = new System.Windows.Forms.TextBox();
@@ -44,7 +44,6 @@
             this.txtGender = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.rtxModules = new System.Windows.Forms.RichTextBox();
-            this.rtxAddress = new System.Windows.Forms.RichTextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -55,6 +54,7 @@
             this.picbxStudent = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_BackStudent = new System.Windows.Forms.Button();
+            this.txtCampus = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbxStudent)).BeginInit();
@@ -87,7 +87,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(108, 821);
+            this.label3.Location = new System.Drawing.Point(58, 531);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 33);
             this.label3.TabIndex = 3;
@@ -96,7 +96,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(108, 1005);
+            this.label4.Location = new System.Drawing.Point(58, 647);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 33);
             this.label4.TabIndex = 4;
@@ -105,7 +105,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(900, 1005);
+            this.label5.Location = new System.Drawing.Point(567, 647);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 33);
             this.label5.TabIndex = 5;
@@ -114,7 +114,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(108, 1204);
+            this.label6.Location = new System.Drawing.Point(58, 769);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 33);
             this.label6.TabIndex = 6;
@@ -123,7 +123,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(927, 1204);
+            this.label7.Location = new System.Drawing.Point(583, 769);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 33);
             this.label7.TabIndex = 7;
@@ -132,25 +132,25 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(109, 1416);
+            this.label2.Location = new System.Drawing.Point(58, 912);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 33);
             this.label2.TabIndex = 8;
             this.label2.Text = "Phone:";
             // 
-            // label8
+            // lblCampus
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1138, 1773);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 41);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Address:";
+            this.lblCampus.AutoSize = true;
+            this.lblCampus.Location = new System.Drawing.Point(573, 916);
+            this.lblCampus.Name = "lblCampus";
+            this.lblCampus.Size = new System.Drawing.Size(88, 33);
+            this.lblCampus.TabIndex = 9;
+            this.lblCampus.Text = "Campus:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(108, 1624);
+            this.label9.Location = new System.Drawing.Point(58, 1044);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(94, 33);
             this.label9.TabIndex = 10;
@@ -204,15 +204,6 @@
             this.rtxModules.Size = new System.Drawing.Size(301, 146);
             this.rtxModules.TabIndex = 16;
             this.rtxModules.Text = "";
-            // 
-            // rtxAddress
-            // 
-            this.rtxAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtxAddress.Location = new System.Drawing.Point(849, 1108);
-            this.rtxAddress.Name = "rtxAddress";
-            this.rtxAddress.Size = new System.Drawing.Size(320, 159);
-            this.rtxAddress.TabIndex = 17;
-            this.rtxAddress.Text = "";
             // 
             // btnUpdate
             // 
@@ -337,6 +328,14 @@
             this.btn_BackStudent.UseVisualStyleBackColor = false;
             this.btn_BackStudent.Click += new System.EventHandler(this.btn_BackStudent_Click);
             // 
+            // txtCampus
+            // 
+            this.txtCampus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCampus.Location = new System.Drawing.Point(679, 910);
+            this.txtCampus.Name = "txtCampus";
+            this.txtCampus.Size = new System.Drawing.Size(256, 39);
+            this.txtCampus.TabIndex = 43;
+            // 
             // StudentData
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
@@ -345,6 +344,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1510, 1100);
+            this.Controls.Add(this.txtCampus);
             this.Controls.Add(this.btn_BackStudent);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtStudentID);
@@ -355,7 +355,6 @@
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.rtxAddress);
             this.Controls.Add(this.rtxModules);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.txtGender);
@@ -363,7 +362,7 @@
             this.Controls.Add(this.txtDOB);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblCampus);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -398,7 +397,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblCampus;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtDOB;
@@ -406,7 +405,6 @@
         private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.RichTextBox rtxModules;
-        private System.Windows.Forms.RichTextBox rtxAddress;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnCreate;
@@ -417,5 +415,6 @@
         private System.Windows.Forms.TextBox txtStudentID;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btn_BackStudent;
+        private System.Windows.Forms.TextBox txtCampus;
     }
 }

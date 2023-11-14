@@ -44,7 +44,7 @@
             // 
             this.txtPassword_Register.BackColor = System.Drawing.Color.White;
             this.txtPassword_Register.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword_Register.ForeColor = System.Drawing.Color.White;
+            this.txtPassword_Register.ForeColor = System.Drawing.Color.Black;
             this.txtPassword_Register.Location = new System.Drawing.Point(442, 250);
             this.txtPassword_Register.MaximumSize = new System.Drawing.Size(542, 40);
             this.txtPassword_Register.MinimumSize = new System.Drawing.Size(442, 30);
@@ -56,7 +56,7 @@
             // 
             this.txtUsername_Register.BackColor = System.Drawing.Color.White;
             this.txtUsername_Register.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername_Register.ForeColor = System.Drawing.Color.White;
+            this.txtUsername_Register.ForeColor = System.Drawing.Color.Black;
             this.txtUsername_Register.Location = new System.Drawing.Point(442, 123);
             this.txtUsername_Register.MaximumSize = new System.Drawing.Size(542, 40);
             this.txtUsername_Register.MinimumSize = new System.Drawing.Size(442, 30);

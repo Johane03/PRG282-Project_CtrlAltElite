@@ -18,16 +18,17 @@ namespace Test.BusinessLogicLayer
         public string Campus { get; set; }
         public Image StudentImage { get; set; }
 
-        public Student(int ID, string name, string surname, DateTime birthDate, string gender, string phone, Image studentImg, int studentID, string firstName, string lastName, DateTime dOB, string campus, Image studentImage)
+        public Student(int studentID, string firstName, string lastName, DateTime dOB, string gender, string phone, string campus, Image studentImage)
         {
-            this.StudentID = ID;
-            this.FirstName = name;
-            this.LastName = surname;
-            this.DOB = birthDate;
+            this.StudentID = studentID;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.DOB = dOB;
             this.Gender = gender;
             this.Phone = phone;
             this.Campus = campus;
-            this.StudentImage = studentImg;
+            this.StudentImage = studentImage;
         }
+
     }
 }
